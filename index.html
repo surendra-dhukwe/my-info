@@ -3,127 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Surendra Dhukwe | Portfolio</title>
+<title>Surendra Dhukwe | Professional Resume</title>
 
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
 <link rel="stylesheet" href="style.css">
+
+<!-- PDF Export -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container">
+  <div class="container d-flex justify-content-between">
     <a class="navbar-brand fw-bold">Surendra Dhukwe</a>
-    <button class="btn btn-light" onclick="downloadResume()">Download Resume</button>
+    <button class="btn btn-light" id="downloadBtn">Download Resume</button>
   </div>
 </nav>
 
-<!-- Hero -->
-<section class="hero d-flex align-items-center">
-  <div class="container text-center"> <div class="myPicture"><img src="surendraji.jpg" alt="My Picture"></div>
-    <h1 class="animate-title">Hi, I'm Surendra Dhukwe</h1>
-    <p class="lead">Full Stack Web Developer | Java & Python Developer</p>
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center text-center">
+  <div class="container">
+    <div class="myPicture mb-3"><img src="surendraji.jpg" alt="Surendra Dhukwe"></div>
+    <h1>Hi, I'm Surendra Dhukwe</h1>
+    <p class="lead">Inventory Management Executive | Full Stack Web Developer</p>
+    <div class="mt-3">
+      <a href="https://www.linkedin.com/in/surendra-dhukwe-a18a32310" target="_blank" class="btn btn-primary me-2">LinkedIn</a>
+      <a href="https://github.com/surendra-dhukwe" target="_blank" class="btn btn-dark">GitHub</a>
+    </div>
   </div>
 </section>
 
-<!-- About -->
-<section class="section">
-<div class="container">
-<h2 class="section-title">About Me</h2>
-<p>
-I am a Full Stack Web Developer with expertise in Java, Python, Node.js, and modern web technologies.
-I specialize in building scalable web applications and database-driven systems.
-</p>
-</div>
+<!-- About Me -->
+<section class="section py-5">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a hardworking professional with experience as an Inventory Management Executive and Full Stack Web Developer. I have strong skills in Java, Python, Node.js, web development, inventory & stock management, and advanced Excel. I thrive in team environments and enjoy solving challenging problems.
+    </p>
+  </div>
 </section>
 
-<!-- Skills -->
-<section class="section bg-light">
-<div class="container">
-<h2 class="section-title">Skills</h2>
-<div class="row g-4">
+<!-- Skills Section -->
+<section class="section bg-light py-5">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="row g-3" id="skillsContainer">
+      <div class="col-md-3 skill-card" data-name="C" data-info="Developed by Dennis Ritchie in 1972. Used for system programming, embedded systems, and game development.">C</div>
+      <div class="col-md-3 skill-card" data-name="C++" data-info="Developed by Bjarne Stroustrup in 1985. Used for system/software development, games, and performance-critical apps.">C++</div>
+      <div class="col-md-3 skill-card" data-name="Java" data-info="Developed by Sun Microsystems in 1995. Used for web apps, Android apps, and enterprise software.">Java</div>
+      <div class="col-md-3 skill-card" data-name="C#" data-info="Developed by Microsoft in 2000. Used for desktop apps, web apps, and game development (Unity).">C#</div>
+      <div class="col-md-3 skill-card" data-name="Python" data-info="Developed by Guido van Rossum in 1991. Used for web dev, AI, data science, automation, and scripting.">Python</div>
+      <div class="col-md-3 skill-card" data-name="HTML" data-info="Developed by Tim Berners-Lee in 1993. Used for structuring web pages.">HTML</div>
+      <div class="col-md-3 skill-card" data-name="CSS" data-info="Developed by Håkon Wium Lie in 1996. Used for styling web pages.">CSS</div>
+      <div class="col-md-3 skill-card" data-name="JavaScript" data-info="Developed by Brendan Eich in 1995. Used for interactive web pages and web apps.">JavaScript</div>
+      <div class="col-md-3 skill-card" data-name="Node.js" data-info="Developed by Ryan Dahl in 2009. Used for backend JavaScript apps and APIs.">Node.js</div>
+      <div class="col-md-3 skill-card" data-name="MySQL" data-info="Developed by Michael Widenius in 1995. Used for relational databases and web apps.">MySQL</div>
+      <div class="col-md-3 skill-card" data-name="Oracle" data-info="Developed by Larry Ellison in 1977. Used for enterprise relational databases.">Oracle</div>
+      <div class="col-md-3 skill-card" data-name="Bootstrap" data-info="Developed by Twitter in 2011. Used for responsive web design.">Bootstrap</div>
+      <div class="col-md-3 skill-card" data-name="Advanced Excel" data-info="Developed by Microsoft. Used for data analysis, charts, pivot tables, and reporting.">Advanced Excel</div>
+      <div class="col-md-3 skill-card" data-name="Inventory Management" data-info="Techniques and software for tracking inventory, stock, and warehouse management.">Inventory Management</div>
+      <div class="col-md-3 skill-card" data-name="Stock Management" data-info="Processes and tools for managing stock levels, orders, and supply chain.">Stock Management</div>
+    </div>
 
-<div class="col-md-3 skill-card">C</div>
-<div class="col-md-3 skill-card">C++</div>
-<div class="col-md-3 skill-card">Java</div>
-<div class="col-md-3 skill-card">C#</div>
-<div class="col-md-3 skill-card">Python</div>
-<div class="col-md-3 skill-card">HTML</div>
-<div class="col-md-3 skill-card">CSS</div>
-<div class="col-md-3 skill-card">JavaScript</div>
-<div class="col-md-3 skill-card">MySQL</div>
-<div class="col-md-3 skill-card">Oracle</div>
-<div class="col-md-3 skill-card">Node.js</div>
+    <div id="skillInfo" class="mt-4 p-3 bg-white rounded shadow">
+      <p class="mb-0">Click on a skill to see details here.</p>
+    </div>
+  </div>
+</section>
 
-</div>
-</div>
+<!-- Education -->
+<section class="section py-5">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <p><strong>B.Tech. in Electronics and Communications</strong> – Jawaharlal Institute of Technology (2025)</p>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="section bg-light py-5">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <p><strong>Inventory Management Executive</strong> – Candytoy Corporate Pvt Ltd</p>
+    <ul>
+      <li>Managed inventory and supervised warehouse operations</li>
+      <li>Implemented stock tracking and reporting systems</li>
+      <li>Coordinated with teams for smooth workflow</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="section py-5">
+  <div class="container">
+    <h2 class="section-title">Certifications</h2>
+    <ul>
+      <li>PCB IC Design</li>
+      <li>Smart Home Security (using sensors)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Languages -->
+<section class="section bg-light py-5">
+  <div class="container">
+    <h2 class="section-title">Languages</h2>
+    <p>Hindi, English</p>
+  </div>
+</section>
+
+<!-- Assets -->
+<section class="section py-5">
+  <div class="container">
+    <h2 class="section-title">Assets</h2>
+    <p>Aadhar Card, PAN Card, Bike, Laptop</p>
+  </div>
 </section>
 
 <!-- Contact -->
-<section class="section">
-<div class="container text-center">
-<h2 class="section-title">Contact</h2>
-<p>📞 9340517781</p>
-<p>📧 surendradhukwe1234@gmail.com</p>
-<p>📍 India</p>
-</div>
+<section class="section bg-light py-5 text-center">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p>📞 9340517781</p>
+    <p>📧 surendradhukwe1234@gmail.com</p>
+    <p>📍 Indore, India</p>
+  </div>
 </section>
 
-<!-- 🔒 Hidden Resume (Not Visible On Screen) -->
+<!-- Download Resume Button -->
+<button id="downloadBtn" class="btn btn-light">Download Resume</button>
+
+<!-- Hidden Resume (for PDF) -->
 <div id="resume" style="display:none;">
+  <h2>Surendra Dhukwe</h2>
+  <p><strong>Phone:</strong> 9340517781</p>
+  <p><strong>Email:</strong> surendradhukwe1234@gmail.com</p>
+  <p><strong>Location:</strong> Indore, India</p>
 
-<h2>Surendra Dhukwe</h2>
-<p><strong>Phone:</strong> 9340517781</p>
-<p><strong>Email:</strong> surendradhukwe1234@gmail.com</p>
-<p><strong>Location:</strong> India</p>
-
-<hr>
+  <hr>
 
 <h3>Career Objective</h3>
-<p>
-Dedicated Full Stack Web Developer with strong knowledge of Java and Python,
-seeking to contribute technical expertise to a growth-oriented organization.
-</p>
+<pre>
+I am a hardworking and dedicated professional with strong expertise in
+inventory management, 
+full stack web development, and IT solutions. I have excellent 
+problem-solving skills, 
+am an effective team player, and have experience managing projects from 
+conception to completion. I am seeking a challenging role where I can 
+utilize my skills and
+experience to contribute to the success of the organization while 
+continuing to grow and develop my career.
+</pre>
 
-<h3>Technical Skills</h3>
-<ul>
-<li>Programming: C, C++, Java, C#, Python</li>
-<li>Frontend: HTML5, CSS3, JavaScript, Bootstrap</li>
-<li>Backend: Node.js, Express.js</li>
-<li>Database: MySQL, Oracle</li>
-<li>Version Control: Git</li>
-</ul>
+  <h3>Technical Skills</h3>
+  <ul>
+    <li>Programming: C, C++, Java, C#, Python</li>
+    <li>Frontend: HTML5, CSS3, JavaScript, Bootstrap</li>
+    <li>Backend: Node.js, Express.js</li>
+    <li>Database: MySQL, Oracle</li>
+    <li>Inventory & Stock Management</li>
+    <li>Advanced Excel</li>
+  </ul>
 
-<h3>Projects</h3>
-<p><strong>Full Stack Web Application</strong> – Developed complete CRUD system with authentication.</p>
-<p><strong>Java Management System</strong> – Built record management system using OOP concepts.</p>
-<p><strong>Python Automation Tool</strong> – Created automation scripts for data processing.</p>
+  <h3>Experience</h3>
+  <p><strong>Inventory Management Executive</strong> – Candytoy Corporate Pvt Ltd</p>
+  <ul>
+    <li>Managed inventory, supervised warehouse staff</li>
+    <li>Implemented stock tracking and reporting systems</li>
+    <li>Team coordination and workflow optimization
+    </li>
+  </ul>
+<br><br>
+  <h3>Education</h3>
+  <p>B.Tech. in Electronics and Communications – Jawaharlal Institute of Technology (2025)</p>
 
-<h3>Education</h3>
-<p>Bachelor's Degree in Computer Science</p>
+  <h3>Certifications</h3>
+  <ul>
+    <li>PCB IC Design</li>
+    <li>Smart Home Security</li>
+  </ul>
 
-<h3>Strengths</h3>
-<ul>
-<li>Problem Solving</li>
-<li>Quick Learner</li>
-<li>Team Collaboration</li>
-</ul>
+  <h3>Languages</h3>
+  <p>Hindi, English</p>
 
-<p>
-I hereby declare that the information provided above is true to the best of my knowledge.
-</p>
+  <h3>Assets</h3>
+  <p>Aadhar Card, PAN Card, Bike, Laptop</p>
 
-<p>
-<strong>Surendra Dhukwe</strong>
-</p>
+  <h3>Projects</h3>
+  <ul>
+    <li><strong>Stock ERP:</strong> Complete inventory & stock management system with reporting and analytics.</li>
+    <li><strong>Games Website:</strong> Developed interactive browser games using HTML, CSS, and JavaScript.</li>
+  </ul>
 
+  <p><strong>Surendra Dhukwe</strong></p>
 </div>
 
+<!-- Footer -->
 <footer class="bg-dark text-white text-center p-3 mt-5">
-© 2026 Surendra Dhukwe
+  © 2026 Surendra Dhukwe
 </footer>
 
+<!-- Custom JS -->
 <script src="script.js"></script>
 </body>
 </html>
